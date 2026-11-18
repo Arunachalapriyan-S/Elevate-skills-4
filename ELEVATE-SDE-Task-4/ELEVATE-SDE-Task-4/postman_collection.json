@@ -1,0 +1,49 @@
+{
+  "info": {
+    "name": "CredVault Task 4 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:5000/api/health"
+      }
+    },
+    {
+      "name": "Create application",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Test Applicant\", \"phone\": \"9876543210\", \"gender\": \"Other\", \"city\": \"Dindigul\", \"state\": \"Tamil Nadu\"}"
+        },
+        "url": "http://127.0.0.1:5000/api/applications"
+      }
+    },
+    {
+      "name": "Admin login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"username\": \"admin\", \"password\": \"ChangeMe123!\"}"
+        },
+        "url": "http://127.0.0.1:5000/api/admin/login"
+      }
+    }
+  ]
+}
